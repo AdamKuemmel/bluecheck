@@ -14,4 +14,16 @@ export default NextAuth({
   pages: {
     signIn: "/auth/signin",
   },
+  //add custom keys to the session user object username/uid
+  callbacks: {
+    async session({ session, token, user }) {
+      session.user.username = session.user.name
+        .split("")
+        .join("")
+        .toLocaleLowerCase();
+      //token.sub is the google uid, store that bad boy in your session for later use
+      session.user.uid = token.sub;
+      return session;
+    },
+  },
 });
