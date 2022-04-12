@@ -3,7 +3,7 @@ import { getProviders, signIn } from "next-auth/react";
 import Header from "../../components/Header";
 
 export default function SignIn({ providers }) {
-  gitreturn(
+  return (
     <>
       <Header />
       <div className="flex flex-col items-center justify-center min-h-screen py-2 text-center px-14 ">
