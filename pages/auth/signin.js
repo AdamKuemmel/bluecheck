@@ -20,7 +20,7 @@ export default function SignIn({ providers }) {
           upload, comment and like!), Recoil for global state management,
           TailwindCSS for utility first UI, FakerJS for fake data, plus many
           advanced react techniques. Feel free to contact me and ask any
-          questions!
+          questions! https://github.com/AdamKuemmel
         </p>
         <div className="mt-40">
           {Object.values(providers).map((provider) => (
