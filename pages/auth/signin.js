@@ -1,8 +1,6 @@
 import React from "react";
 import { getProviders, signIn } from "next-auth/react";
 import Header from "../../components/Header";
-import logo from "../../public/logoAK.png";
-import { Image } from "next";
 
 export default function SignIn({ providers }) {
   console.log(logo);
