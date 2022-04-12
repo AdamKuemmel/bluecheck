@@ -13,6 +13,7 @@ import { signOut, useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom";
+import Logo from "../public/logoAk.png";
 
 function Header() {
   const { data: session } = useSession();
@@ -29,16 +30,17 @@ function Header() {
         >
           <Image
             onClick={() => router.push("/")}
-            src="https://links.papareact.com/ocw"
+            src={Logo}
             layout="fill"
             objectFit="contain"
           />
         </div>
-        <div className="relative flex-shrink-0 w-10 lg:hidden cursor-pointers">
+        <div className="relative flex-shrink-0 w-10 cursor-pointer lg:hidden">
           <Image
-            src="https://links.papareact.com/jjm"
+            src={Logo}
             layout="fill"
             objectFit="contain"
+            onClick={() => router.push("/")}
           />
         </div>
         {/* middle-search input */}

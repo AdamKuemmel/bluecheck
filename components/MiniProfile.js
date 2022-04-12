@@ -14,7 +14,7 @@ function MiniProfile() {
       <div className="flex-1 mx-4 ">
         {/* protect code with "?"(optional chaining) bc this is part of async!!!! */}
         <h2 className="font-bold">{session?.user?.username}</h2>
-        <h3 className="text-sm text-gray-400">Welcome to Instagram</h3>
+        <h3 className="text-sm text-gray-400">Welcome to AK_Social</h3>
       </div>
       <button onClick={signOut} className="text-sm font-semibold text-blue-400">
         Sign Out

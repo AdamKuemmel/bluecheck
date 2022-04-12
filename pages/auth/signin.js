@@ -1,17 +1,29 @@
 import React from "react";
 import { getProviders, signIn } from "next-auth/react";
 import Header from "../../components/Header";
+import logo from "../../public/logoAK.png";
+import { Image } from "next";
 
 export default function SignIn({ providers }) {
+  console.log(logo);
   return (
     <>
       <Header />
       <div className="flex flex-col items-center justify-center min-h-screen py-2 text-center px-14 ">
-        <img className="w-80" src="https://links.papareact.com/ocw" alt="" />{" "}
+        <img
+          className="pl-[40px] w-80"
+          src="https://upload.wikimedia.org/wikipedia/commons/1/17/Usethis_on_web.png"
+          alt=""
+        />
+
         <p className="italic font-xs w-80">
-          This is not actually instagram, but it made for a great design to
-          display certian technologies. Right now you are using next-auth to
-          authenticate a login session.
+          Welcome to Adam Kuemmels social media example. Right now you are using
+          next-auth to authenticate a login session. Some other technologoies
+          displayed in the project are Firebase for the live feed(you can
+          upload, comment and like!), Recoil for global state management,
+          TailwindCSS for utility first UI, FakerJS for fake data, plus many
+          advanced react techniques. Feel free to contact me and ask any
+          questions!
         </p>
         <div className="mt-40">
           {Object.values(providers).map((provider) => (
