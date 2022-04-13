@@ -3,15 +3,16 @@ import { getProviders, signIn } from "next-auth/react";
 import Header from "../../components/Header";
 
 export default function SignIn({ providers }) {
+  console.log(providers);
   return (
     <>
       <Header />
       <div className="flex flex-col items-center justify-center min-h-screen py-2 text-center px-14 ">
-        <img
+        {/* <img
           className="pl-[40px] w-80"
           src="https://upload.wikimedia.org/wikipedia/commons/1/17/Usethis_on_web.png"
           alt=""
-        />
+        /> */}
 
         <p className="italic font-xs w-80">
           Welcome to Adam Kuemmels social media example. Right now you are using
