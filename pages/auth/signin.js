@@ -28,7 +28,11 @@ export default function SignIn({ providers }) {
             <div key={provider.name}>
               <button
                 className="p-3 text-white bg-blue-500 rounded-lg"
-                onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+                onClick={() =>
+                  signIn(provider.id, { callbackUrl: "/" })
+                    .then((data) => console.log("loginpagethen", data))
+                    .catch((error) => console.log("loginpagecatch", error))
+                }
               >
                 Sign in with {provider.name}
               </button>
